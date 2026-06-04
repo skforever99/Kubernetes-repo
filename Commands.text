@@ -3,3 +3,5 @@ Deploy any Yaml : Kubectl apply -f namespace.yaml
 get pods - kubectl get pods
 
 get namespaces - kubectl get ns
+
+exec into a pod : kubectl exec -it my-pod -n sunil-namespace -- bash
