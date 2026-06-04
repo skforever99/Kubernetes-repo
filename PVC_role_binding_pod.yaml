@@ -1,0 +1,21 @@
+kind: Pod
+apiVersion: v1
+
+metadata:
+ name: my-nginx-pod
+ namespace: sunil-namespace
+
+spec:
+ containers:
+ - name: nginx-container
+   image: nginx:latest
+   ports:
+   - containerPort: 80
+   volumeMounts:
+   - mountPath: /var/www/html
+     name: my-volume
+ volumes:
+  - name: my-volume
+    persistentVolumeClaim:
+     claimName: local-pvc
+   
