@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+
+metadata:
+ name: my-nginx-pod
+ namespace: sunil-namespace
+
+spec:
+ containers:
+ - name: nginx-container
+   image: nginx:latest
+   ports:
+   - containerPort: 80
