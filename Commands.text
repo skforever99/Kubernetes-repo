@@ -11,3 +11,5 @@ describe a pod : kubectl describe pod my-pod -n default
 get all deployment : kubectl get deployment -n default
 
 scale a deployment : kubectl scale deployment nginx-deployment -n sunil-namespace --replicas=4
+
+list all configmaps: kubectl get configmap -n dafault
