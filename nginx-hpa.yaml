@@ -1,0 +1,20 @@
+kind: HorizontalPodAutoscaler
+apiVersion: autoscaling/v2
+metadata: 
+ name: nginx-hpa
+ namespace: sunil-namespace
+
+spec:
+ scaleTargetRef:
+  kind: Deployment
+  name: nginx-deployment
+  apiVersion: apps/v1
+ minReplicas: 1
+ maxReplicas: 5
+ metrics:
+  - type: Resource
+    resource:
+     name: CPU
+     target:
+      type: Utilization
+      averageUtilization: 5
