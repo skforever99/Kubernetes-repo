@@ -15,3 +15,5 @@ scale a deployment : kubectl scale deployment nginx-deployment -n sunil-namespac
 list all configmaps: kubectl get configmap -n dafault
 
 taint a node :  kubectl taint node sunil-cluster-worker    prod=true:NoSchedule
+
+Top Command : kubectl top nodes OR kubectl top pods -n default
