@@ -17,3 +17,5 @@ list all configmaps: kubectl get configmap -n dafault
 taint a node :  kubectl taint node sunil-cluster-worker    prod=true:NoSchedule
 
 Top Command : kubectl top nodes OR kubectl top pods -n default
+
+check RBAC : kubectl auth can-i get pods --as=sunil-service-account -n sunil-namespace
